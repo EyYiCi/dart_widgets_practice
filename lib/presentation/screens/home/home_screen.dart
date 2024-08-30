@@ -25,7 +25,13 @@ class _HomeView extends StatelessWidget {
     
     return ListView.builder(
       itemCount: appMenuItem.length,
-      itemBuilder:(context, index) => Text(appMenuItem[index].title),
+      itemBuilder:(context, index) {
+        final menuItem = appMenuItem[index];
+        return ListTile(
+          title: Text(menuItem.title),
+          subtitle: Text(menuItem.subTitle),
+        );
+      }
 
     );
   }
