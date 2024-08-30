@@ -32,9 +32,4 @@ class AppTheme{
     )
   );
 
-  Color getSelected() => colorList[selectedColor];
-
-
-
-
 }
