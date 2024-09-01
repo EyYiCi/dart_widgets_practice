@@ -50,15 +50,13 @@ class _CustomListTitle extends StatelessWidget {
 
     final colors = Theme.of(context).colorScheme;
 
-
-
     return ListTile(
       leading: Icon(menuItem.icon, color:colors.primary),
       trailing: Icon(Icons.arrow_forward_ios_outlined,color:colors.primary),
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: (){
-        context.pushNamed(CardsScreen.name);        
+        context.pushNamed(ButtonScreen.name);        
       },
     );
   }

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CardsScreen extends StatelessWidget {
   static const String name = 'cards_screen';
@@ -12,7 +13,22 @@ class CardsScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Cards'),
       ),
-      body: const Placeholder(),
+      body:const _ButtonView(),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.arrow_back_ios_new_rounded),
+         onPressed: (){
+          context.pop();
+         }
+        ),
     );
+  }
+}
+
+class _ButtonView extends StatelessWidget {
+  const _ButtonView();
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
